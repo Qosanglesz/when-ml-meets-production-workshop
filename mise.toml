@@ -1,0 +1,9 @@
+[tools]
+python = "3.14.0"
+uv = "0.10.0"
+
+[tasks.sync]
+run = "uv sync"
+
+[tasks.export]
+run = "uv export --format requirements.txt --output-file requirements.txt"
