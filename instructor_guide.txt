@@ -1,0 +1,30 @@
+
+Instructor Guide – Monitoring ML Systems Workshop (3 hours)
+
+1. Setup (10 min)
+- Participants install dependencies:
+  pip install -r requirements.txt
+
+2. Train Model (35 min)
+- Run: python train_model.py
+- Discuss baseline accuracy.
+
+3. Evaluate Production Data (35 min)
+- Run: python evaluate_production.py
+- Observe performance drop.
+
+4. Detect Drift (40 min)
+- Run: python drift_detection.py
+- Open drift_report.html
+- Discuss which features drifted.
+
+5. Schema Failure Exercise (20 min)
+- Ask participants to rename 'income' column to 'monthly_income'
+- Run evaluate script again to see failure.
+
+6. Discussion (20 min)
+- What should be monitored?
+- Data drift, prediction drift, missing features, model performance.
+
+Key Message:
+ML systems fail due to data changes, not just model quality.
