@@ -4,5 +4,23 @@ uv = "0.10.0"
 [tasks.sync]
 run = "uv sync"
 
+[tasks.train_model]
+run = "uv run python train_model.py"
+
+[tasks.simulate_production_data_drift]
+run = "uv run python simulate_production_data_drift.py"
+
+[tasks.detect_drift]
+run = "uv run python detect_drift.py"
+
+[tasks.run_training_serving_skew]
+run = "uv run python run_training_serving_skew.py"
+
+[tasks.retrain_model]
+run = "uv run python retrain_model.py"
+
+[tasks.compare_models]
+run = "uv run python compare_models.py"
+
 [tasks.export]
 run = "uv export --format requirements.txt --output-file requirements.txt"

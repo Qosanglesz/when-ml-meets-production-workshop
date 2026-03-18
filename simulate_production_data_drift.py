@@ -1,4 +1,3 @@
-import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -16,9 +15,12 @@ model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
 pred = model.predict(X_test)
-
 print("Training accuracy:", accuracy_score(y_test, pred))
 
-# Save the model
-joblib.dump(model, "model.joblib")
-print("Model saved to model.joblib")
+prod = pd.read_csv("data/loan_production.csv")
+
+X_prod = prod.drop("default", axis=1)
+y_prod = prod["default"]
+
+pred = model.predict(X_prod)
+print("Production accuracy:", accuracy_score(y_prod, pred))
