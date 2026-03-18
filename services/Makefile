@@ -1,6 +1,7 @@
-build:
+setup:
 	mkdir -p artifacts
-	cp ../pipelines/artifacts/* artifacts
+
+build:
 	docker compose build
 
 up:
